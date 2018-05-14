@@ -7,9 +7,9 @@
     "test": "mocha",
     "build": "./node_modules/typescript/bin/tsc",
     "watch-ts": "./node_modules/typescript/bin/tsc -w",
-    "release:major": "git commit -m 'updated CHANGELOG.md' && npm version major && git push origin && git push origin --tags",
-    "release:minor": "git commit -m 'updated CHANGELOG.md' && npm version minor && git push origin && git push origin --tags",
-    "release:patch": "git commit -m 'updated CHANGELOG.md' && npm version patch && git push origin && git push origin --tags"
+    "release:major": "npm version major && git push origin && git push origin --tags",
+    "release:minor": "npm version minor && git push origin && git push origin --tags",
+    "release:patch": " npm version patch && git push origin && git push origin --tags"
   },
   "repository": {
     "type": "git",
