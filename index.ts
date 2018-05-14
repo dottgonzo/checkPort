@@ -7,7 +7,7 @@ import * as net from "net"
 
 
 
-function checkPort(port: number) {
+export function checkPort(port: number) {
   return new Promise<{ port: number }>((resolve, reject) => {
     let available = false;
     const s = net.createServer().listen(port, '0.0.0.0');
@@ -27,7 +27,7 @@ function checkPort(port: number) {
 }
 
 
-function checkFreePortFromPool(portPool: number[]) {
+export function checkFreePortFromPool(portPool: number[]) {
   return new Promise<{ port: number }>((resolve, reject) => {
 
     async.eachSeries(portPool, (p, cb) => {

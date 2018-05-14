@@ -22,6 +22,7 @@ function checkPort(port) {
         });
     });
 }
+exports.checkPort = checkPort;
 function checkFreePortFromPool(portPool) {
     return new Promise((resolve, reject) => {
         async.eachSeries(portPool, (p, cb) => {
@@ -38,3 +39,4 @@ function checkFreePortFromPool(portPool) {
         });
     });
 }
+exports.checkFreePortFromPool = checkFreePortFromPool;
