@@ -1,6 +1,6 @@
 {
   "name": "checkport",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Check Free Ports",
   "main": "index.js",
   "scripts": {
