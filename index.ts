@@ -20,8 +20,8 @@ export function checkPort(port: number) {
       s.close();
     });
     s.on('close', () => {
-      if (available) reject('invalid port');
-      resolve({ port: port });
+      if (available) return resolve({ port: port });
+      reject('invalid port');
     });
   })
 }

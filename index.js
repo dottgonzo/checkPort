@@ -17,8 +17,8 @@ function checkPort(port) {
         });
         s.on('close', () => {
             if (available)
-                reject('invalid port');
-            resolve({ port: port });
+                return resolve({ port: port });
+            reject('invalid port');
         });
     });
 }
